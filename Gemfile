@@ -12,8 +12,14 @@ gem 'devise' , '3.0.0.rc'
 gem 'simple_form'
 gem "paperclip", "~> 3.0"
 gem "haml-rails"
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 gem 'turbolinks'
+gem 'jquery-turbolinks'
+gem 'acts-as-taggable-on'
+gem 'will_paginate', '~> 3.0'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,6 +35,14 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem 'sqlite3'
+  gem 'better_errors','0.7.0'
+  gem 'binding_of_caller','0.7.1'
+  gem 'meta_request' , '0.2.5'
+  gem 'bullet'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -36,7 +50,8 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'thin'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'

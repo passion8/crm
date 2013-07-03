@@ -1,0 +1,10 @@
+%h2 Search User based on keywords and skills
+
+%form.form-search
+  .input-append
+    %input.search-query{:type => "text" , :name => "q"}/
+    %button.btn{:type => "submit"} Search
+
+%hr
+%h3= "#{pluralize(@users.count, 'result')} found"
+= render @users
