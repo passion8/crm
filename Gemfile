@@ -19,6 +19,7 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'acts-as-taggable-on'
 gem 'will_paginate', '~> 3.0'
+gem 'faker'
 
 
 # Gems used only for assets and not required

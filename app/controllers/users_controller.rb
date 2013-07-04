@@ -1,12 +1,16 @@
 class UsersController < ApplicationController
   
   def all
-    @users = User.all
+    @users = User.paginate(:page => params[:page])
   end
 
   def search
     @skill = params[:q]
-    @users = User.tagged_with(@skill)
+    @users = User.tagged_with(@skill).paginate(:page => params[:page])
+    respond_to do |format|
+      format.html 
+      format.js
+    end
   end
 
   def profile

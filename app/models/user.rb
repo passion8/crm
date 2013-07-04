@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body 
   acts_as_taggable
   acts_as_taggable_on :skills, :interests
+  self.per_page = 10
 end

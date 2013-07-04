@@ -2,9 +2,13 @@
 
 %form.form-search
   .input-append
-    %input.search-query{:type => "text" , :name => "q"}/
+    %input.search-query{:type => "text" , :name => "q" , placeholder: 'rubyonrails, aws,..'}/
     %button.btn{:type => "submit"} Search
 
 %hr
-%h3= "#{pluralize(@users.count, 'result')} found"
-= render @users
+#result
+  %h3= "#{pluralize(@users.count, 'result')} found"
+  .content
+    = render @users
+  .pagination
+    = will_paginate @users

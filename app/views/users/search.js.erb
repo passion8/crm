@@ -1,0 +1,3 @@
+$("#result h3").html("<%= j "#{pluralize(@users.count, 'result')} found"  %>");
+$("#result .content").html("<%=j render @users %>");
+$("#result .pagination").html("<%=j will_paginate @users  %>");
