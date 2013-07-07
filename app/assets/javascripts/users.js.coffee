@@ -11,7 +11,8 @@ displayResult = (num)->
     data: {q: num}
 
 comma = 0
-$(document).on  "keypress" , ".search-query" , (e)->
+$(".form-search").closest(".span9").on  "keypress" , ".search-query" , (e)->
+  console.log("sss")
   event.preventDefault() if event.which >= 37 and event.which <= 40
   $this = $(this)
   if $this.val().split(",").length >= (comma + 1)
